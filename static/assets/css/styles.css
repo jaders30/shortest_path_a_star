@@ -1,0 +1,510 @@
+/*
+    DEMO STYLE
+*/
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+    overflow-x: hidden;
+    margin: 0; 
+    padding: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #206fa0; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #33A4E9; 
+  }
+
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    z-index: 998;
+    position: absolute;
+    left: 5px;
+    top: 20px; 
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    width: 0;
+    height: 0;
+   
+    
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100vh;
+    z-index: 999;
+    background: #33A4E9;
+    color: #fff;
+    transition: all 0.3s;
+    overflow-y: scroll;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+#dismiss {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background: #29cbf0;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
+}
+
+#dismiss:hover {
+    background: #fff;
+    color: #101314;
+}
+
+
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #33A4E9;
+    color:white
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #33A4E9;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: #33A4E9;
+    background: #fff;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #29cbf0;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #33A4E9;
+}
+
+ul.CTAs {
+    padding: 10px 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+ul.CTAs .download {
+    background: #fff;
+    color: #09677c;
+}
+
+ul.CTAs .download:hover {
+    cursor: pointer;
+    background-color: #29cbf0 !important;
+    color: white !important;
+}
+a.article{
+    cursor: pointer;
+    background-color: #fff;
+    color: #09677c;
+}
+
+#totalCasesBtn:hover{
+  background-color: #29cbf0 !important;
+  color: white !important;
+}
+
+#showRecommedationBtn:hover {
+    cursor: pointer;
+    background-color: #29cbf0 !important;
+    color: white !important;
+}
+
+#activeCasesIcon{
+    visibility: hidden;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top: 20px;
+    /* min-height: 100vh; */
+    transition: all 0.3s;
+}
+
+.mapboxgl-popup {
+    max-width: 400px;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+
+.card_recommendations {
+  display: none;
+  position: absolute;
+  margin: 20px 20px 30px 20px;
+  width: 25%;
+  min-height: 100px;
+  max-height: 300px;
+  /* top: 0; */
+  color: rgb(0, 0, 0);
+  bottom: 0;
+  padding: 20px;
+  opacity: 0.9;
+  background-color: #33A4E9;
+  z-index: 997;
+  overflow: hidden;
+  overflow-y: auto; 
+  border-radius: 12px;
+  -webkit-box-shadow: 0 10px 5px #888888;
+  -moz-box-shadow: 0 10px 5px #888888;
+  box-shadow: 0 5px 5px #888888;
+ 
+ 
+}
+
+
+.card {
+  font-size: small;
+  border-bottom: solid #d3d3d3 2px;
+  margin-bottom: 6px;
+  color: rgb(0, 0, 0);
+}
+ 
+.card-header {
+  font-weight: bold;
+ 
+  padding: 6px;
+  color: rgb(245, 241, 241);
+}
+ 
+.no-route {
+  background-color: #dbe6e0;
+  color: #33a532;
+}
+ 
+.obstacle-found {
+  background-color: #d3d3d3;
+  color: rgb(19, 4, 4);
+  padding: 15px;
+}
+ 
+.route-found {
+  background-color: #33a532;
+  border-top-right-radius: 22px;
+  border-top-left-radius: 22px;
+  /* color: #fff;
+  font-size: 11px;
+  height: 20px;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  text-align: center;
+  justify-content: center; */
+  
+
+}
+ 
+.card-details {
+    padding: 7px 7px;
+}
+.weight-details {
+    font-size: 9px;
+    padding: 7px 7px;
+}
+
+.sub-details {
+    font-size: 10px;
+    padding: 7px 7px;
+}
+
+@media only screen and (max-width: 575px) {
+    .card_recommendations {
+        display: none;
+        position: absolute;
+        width: 100vw;
+        margin: 0;
+        height: 190px;
+        color: rgb(0, 0, 0);
+        bottom: 0;
+        padding: 20px;
+        opacity: 1;
+        background-color: #33A4E9;
+        z-index: 997;
+        overflow: hidden;
+        overflow-y: scroll; 
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        box-shadow: 5px 10px #888888;
+      }
+      #preloader p:before {
+        content: "PLEASE WAIT THE SYSTEM IS RENDERING THE ENTIRE MAP...";
+        text-align: center;
+        color: white;
+        font-size: 14px;
+      }
+
+      #preloaderRoute p:before {
+        content: "WE ARE FINDING THE BEST ROUTES FOR YOU...";
+        text-align: center;
+        color: white;
+        font-size: 14px;
+      }
+      
+  }
+
+
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  height: 100vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  z-index: 19999;
+  overflow: hidden;
+  background: #09677c;
+  opacity: 0.9;
+  flex-direction: column;
+  text-align: center;
+}
+
+#preloader:after {
+  content: "";
+  border: 6px solid  #33A4E9;
+  border-top-color: #e7e4fe;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: animate-preloader 0.2s linear infinite;
+  animation: animate-preloader 0.2s linear infinite;
+   
+}
+
+#preloader p:before {
+  content: "PLEASE WAIT THE SYSTEM IS RENDERING THE ENTIRE MAP...";
+  color: white;
+
+}
+
+  @-webkit-keyframes animate-preloader {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes animate-preloader {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+/* Loading after before generating route */
+  #preloaderRoute {
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    z-index: 19999;
+    overflow: hidden;
+    background: #09677c;
+    opacity: 0.9;
+    flex-direction: column;
+    text-align: center;
+    display: none;
+   
+  }
+  
+  #preloaderRoute:after {
+    content: "";
+    border: 6px solid  #33A4E9;
+    border-top-color: #e7e4fe;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: animate-preloaderRoute 0.2s linear infinite;
+    animation: animate-preloaderRoute 0.2s linear infinite;
+     
+  }
+  
+  #preloaderRoute p:before {
+    content: "WE ARE FINDING THE BEST ROUTES FOR YOU...";
+    color: white;
+  
+  }
+  
+  @-webkit-keyframes animate-preloaderRoute {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes animate-preloaderRoute {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+/* uncomment this to if directions features is activated */
+  /* #instructions {
+    position: absolute;
+    margin: 20px;
+    width: 21%;
+    height: 450px;
+    top: 18%;
+    right: 0;
+    overflow:hidden;
+    background: rgba(8, 8, 8, 0.7);
+    overflow-y: scroll;
+    font-family: sans-serif;
+    z-index: 10000;
+    display: none;
+  }
+  
+  #instructions ol{
+   
+    color: rgb(245, 241, 241);
+  }
+  
+  #instructions ol li p{
+    font-size: 14px;
+    color: rgb(245, 241, 241);
+  }
+  .instruction_header{
+    background-color: #33a532;
+    font-weight: bold;
+    padding: 20px;
+    color: rgb(245, 241, 241);
+    margin-bottom: 15px;
+  }
+  
+  @media only screen and (max-width: 575px) {
+    #instructions {   
+      width: 70%;
+      height: 320px;
+      top: 20%;
+      right: 0;
+     
+    }
+  } */
+  
+  /* marker used for documentation */
+  /* .marker {
+    background-image: url('../img/tabsicon.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 20000;
+    } */
+
+  
+

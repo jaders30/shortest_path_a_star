@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c2453000ec.js" crossorigin="anonymous"></script>  
+
+    <link rel="icon" href="{{ url_for('static', filename='/assets/img/tabsicon.png') }}" sizes="72x72">
+
+    <style>
+        
+        body{
+            height: 100vh;
+            width: 100vw;  
+            background-image: url("{{ url_for('static', filename='/assets/img/mainmenubg.png') }}");
+            background-color: #33A4E9;
+            background-position: center center; 
+            background-repeat: no-repeat; 
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: 'Poppins', sans-serif;
+        }
+        .div, h4{
+            color: white;
+            text-shadow: 2px 6px #888888;
+        }
+       
+        </style>
+    <title>EFAST | Help</title>
+</head>
+<body>
+
+    <script>
+        function redirect(href){
+            window.location.href=href;
+        }
+
+    </script>
+
+    <!-- <div class="p-5 w-100 d-flex align-items-center justify-content-center position-relative">
+            <h4 class="display-5">Help</h4>
+            <a class="btn" style="position: absolute; top: 10px; left: 10px" href="{{ url_for('main_menu') }}">  <i class="fa-solid fa-arrow-left-long" style="color: white;"></i> </a>
+    </div>
+
+    <div class="w-100 p-3" style="height:900px">
+        <div class="h-75 w-100 h-100 " style="border-radius: 15px; border: 3px solid white; overflow: auto; letter-spacing: 1px; ">
+            <div class="container-fluid  d-flex align-items-center flex-column  justify-content-center " style="color: white;">
+                <br></br>
+                
+                <h3>Color coding for the number of COVID-19 cases</h3>
+                <img src="{{ url_for('static', filename='/assets/img/legend.png') }}" class="img-fluid" style="border: 2px solid #202A44;" alt="Color coding">
+                <hr style="width:100%;text-align:left;margin-left:0; color: #202A44;" size="5"> -->
+                <!-- <h3>You can show/hide the directions with this button from the side bar</h3>
+                <img src="{{ url_for('static', filename='/assets/img/showhidedirections.png') }}" class="img-fluid" style="height: 200px; width: 250px; border: 2px solid #202A44" alt="Show/hide Directions"> -->
+                <!-- <h3>You can show/hide the recommendation with this button from the side bar</h3>
+                <img src="{{ url_for('static', filename='/assets/img/showhiderecommendation.png') }}" class="img-fluid" style="height: 200px; width: 250px; border: 2px solid #202A44" alt="Show/hide Recommendation">
+                <hr style="width:100%;text-align:left;margin-left:0; color: #202A44;" size="5">
+                <h3>To view active cases just tap/click this button from the side bar</h3>
+                <img src="{{ url_for('static', filename='/assets/img/active.png') }}" class="img-fluid" style="height: 200px; width: 250px; border: 2px solid #202A44" alt="Active Cases">
+                <hr style="width:100%;text-align:left;margin-left:0; color: #202A44;" size="5">
+                <h3>To view total cases just tap/click this button from the side bar</h3>
+                <img src="{{ url_for('static', filename='/assets/img/total.png') }}" class="img-fluid" style="height: 200px; width: 250px;border: 2px solid #202A44" alt="Total Cases">
+                <hr style="width:100%;text-align:left;margin-left:0; color: #202A44;" size="5">
+                <h3>To view active and total cases just tap/click the blue circular button from the map</h3>
+                <img src="{{ url_for('static', filename='/assets/img/bluecircularbutton.png') }}" class="img-fluid"  style="height: 200px; width: 250px; border: 2px solid #202A44" alt="Total Cases">
+                <hr style="width:100%;text-align:left;margin-left:0; color: #202A44;" size="5">
+                <h3>Click/tap this button before entering or pinning new location</h3>
+                <img src="{{ url_for('static', filename='/assets/img/clearsearch.png') }}" class="img-fluid"  style="height: 200px; width: 250px; border: 2px solid #202A44" alt="Total Cases">
+                <br></br> -->
+
+<!-- 
+            </div>
+        </div>
+    </div> -->
+
+
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c2453000ec.js" crossorigin="anonymous"></script>   
+
+
+    <link rel="icon" href="{{ url_for('static', filename='/assets/img/tabsicon.png') }}" sizes="72x72">
+    <style>
+        
+        body{
+            height: 100vh;
+            width: 100vw;  
+            background-image: url("{{ url_for('static', filename='/assets/img/mainmenubg.png') }}");
+            background-color: #33A4E9;
+            background-position: center center; 
+            background-repeat: no-repeat; 
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: 'Poppins', sans-serif;  
+        }
+        
+        .div, h4{
+            color: white;
+            text-shadow: 2px 6px #888888;
+        }
+
+
+    </style>
+
+    <title>EFAST | About Us</title>
+</head>
+<body>
+
+    <script>
+        function redirect(href){
+            window.location.href=href;
+        }
+
+    </script>
+
+    <!-- <div class="p-5 w-100 d-flex align-items-center justify-content-center position-relative">
+            <h4 class="display-5">About Us</h4>
+            <a class="btn" style="position: absolute; top: 10px; left: 10px" href="{{ url_for('main_menu') }}">  <i class="fa-solid fa-arrow-left-long" style="color: white;"></i> </a>
+    </div>
+
+    <div class="w-100 p-3" style="height:700px">
+        <div class="h-100 w-100 about-container" style="border-radius: 15px; border: 3px solid white; overflow: auto; letter-spacing: 1px;">
+            <div class="container-fluid   align-items-center  justify-content-center" style="color: black; text-align: justify; word-break: break-all;">
+                <br></br>
+                <h5>EFAST is a thesis study of three students from the Technological Institute of the Philippines - Quezon City: 
+                    Aimee Mm V. Conales, Virgilio C. Fajardo, and Noehl V. Paragas. EFAST is a recommender application 
+                    that helps daily commuters, public transportation drivers (e.g. Grab, Angkas, and taxis), private 
+                    vehicle owners, and delivery riders to lower the risk of getting COVID-19. The application displays 
+                    a dynamic heatmap of the active COVID-19 hotspots while suggesting the shortest and low-risk path to 
+                    the user’s starting location and destination. The system utilized the A* Algorithm to recommend the 
+                    shortest and low-risk path for the users. The application focused mainly on Quezon City’s District 
+                    3 and utilized Quezon City’s Official Facebook Page and Fast-Tack Cities for the dataset of COVID-19 
+                    cases. </h5>
+                    <br></br>
+            </div>
+        </div>
+    </div> -->
+    
+</body>
+</html>
